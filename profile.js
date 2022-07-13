@@ -1,11 +1,11 @@
-// Menu Btn for Mobile & Reduced Window Size
 $(document).ready(function(){
-
+// Menu Btn for Mobile & Reduced Window Size
     $('#menu').click(function(){
         $(this).toggleClass('fa-times');
         $('header').toggleClass('toggle');
     });
 
+// Top Scroll Btn
     $(window).on('scroll load',function(){
 
         $('#menu').removeClass('fa-times');
@@ -15,12 +15,9 @@ $(document).ready(function(){
             $('.top').show();
         }else{
             $('.top').hide();
-
         }
-
     });
 
-// Top Scroll Btn
     $('a[href*="#"').on('click',function(e){
         
         e.preventDefault();
@@ -28,7 +25,6 @@ $(document).ready(function(){
         $('html, body').animate({
 
             scrollTop : $($(this).attr('href')).offset().top,
-
         },
         500,
         'linear'
